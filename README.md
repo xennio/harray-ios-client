@@ -22,7 +22,7 @@ pod 'Xperio'
 
 ## Author
 
-cem_ayan@outlook.com, ata.turgay@appcent.mobi
+ozan.uysal@appcent.mobi, ata.turgay@appcent.mobi
 
 ## License
 
