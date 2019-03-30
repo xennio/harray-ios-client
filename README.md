@@ -1,9 +1,9 @@
-# Xperio
+# Xennio
 
-[![CI Status](https://img.shields.io/travis/cem_ayan@outlook.com/Xperio.svg?style=flat)](https://travis-ci.org/cem_ayan@outlook.com/Xperio)
-[![Version](https://img.shields.io/cocoapods/v/Xperio.svg?style=flat)](https://cocoapods.org/pods/Xperio)
-[![License](https://img.shields.io/cocoapods/l/Xperio.svg?style=flat)](https://cocoapods.org/pods/Xperio)
-[![Platform](https://img.shields.io/cocoapods/p/Xperio.svg?style=flat)](https://cocoapods.org/pods/Xperio)
+[![CI Status](https://img.shields.io/travis/cem_ayan@outlook.com/Xennio.svg?style=flat)](https://travis-ci.org/cem_ayan@outlook.com/Xennio)
+[![Version](https://img.shields.io/cocoapods/v/Xennio.svg?style=flat)](https://cocoapods.org/pods/Xennio)
+[![License](https://img.shields.io/cocoapods/l/Xennio.svg?style=flat)](https://cocoapods.org/pods/Xennio)
+[![Platform](https://img.shields.io/cocoapods/p/Xennio.svg?style=flat)](https://cocoapods.org/pods/Xennio)
 
 ## Example
 
@@ -13,11 +13,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Xperio is available through [CocoaPods](https://cocoapods.org). To install
+Xennio is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Xperio'
+pod 'Xennio'
 ```
 
 ## Author
@@ -26,4 +26,4 @@ ozan.uysal@appcent.mobi, ata.turgay@appcent.mobi
 
 ## License
 
-Xperio is available under the MIT license. See the LICENSE file for more info.
+Xennio is available under the MIT license. See the LICENSE file for more info.

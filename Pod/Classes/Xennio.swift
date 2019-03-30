@@ -1,6 +1,6 @@
 //
-//  Xperio.swift
-//  Xperio
+//  Xennio.swift
+//  Xennio
 //
 //  Created by Ozan Uysal on 17.07.2018.
 //  Copyright © 2018 Appcent. All rights reserved.
@@ -14,7 +14,7 @@ enum UserDefaultsKey: String {
     case PushToken = "xPushToken"
 }
 
-class Xperio: NSObject {
+class Xennio: NSObject {
     
     private static var serverUrl : String!
     private static var appId : String!
@@ -38,13 +38,13 @@ class Xperio: NSObject {
         UserDefaults.standard.set(token, forKey: UserDefaultsKey.PushToken.rawValue)
     }
     
-    static func sessionStart(activity : String, lastActivity : String, userId : String = "") {
+    static func sessionStart(activity : String, lastActivity : String, memberId : String = "") {
         var params = Dictionary<String, Dictionary<String, String>>()
         params["h"] = h(action: "SS")
         var b = Dictionary<String, String>()
         b["activity"] = activity
         b["rf"] = lastActivity
-        b["userId"] = userId
+        b["memberId"] = memberId
         b["os"] = "iOS \(UIDevice.current.systemVersion)"
         b["id"] = UIDevice.current.identifierForVendor?.uuidString
         b["token"] = UserDefaults.standard.string(forKey: UserDefaultsKey.PushToken.rawValue) ?? ""
@@ -52,32 +52,36 @@ class Xperio: NSObject {
         makeRequest(params: params)
     }
     
-    static func pageView(activity : String, lastActivity : String, events : Dictionary<String, Any> = Dictionary<String, Any>(), userId : String = "") {
+    static func pageView(activity : String, lastActivity : String, events : Dictionary<String, Any> = Dictionary<String, Any>(), memberId : String = "") {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "PV")
         var b = Dictionary<String, Any>()
         for (key,value) in events {
             b[key] = value
         }
-        b["activity"] = activity
+        b["pageType"] = activity
         b["rf"] = lastActivity
-        if userId.isEmpty == false {
-            b["userId"] = userId
+        if memberId.isEmpty == false {
+            b["memberId"] = memberId
         }
         params["b"] = b
         makeRequest(params: params)
     }
-    
-    static func customEvent(eventName : String, events : Dictionary<String, Any> = Dictionary<String, Any>(), userId : String = "") {
+
+    static func savePushToken(deviceToken : String, memberId : String = "") {
         var params = Dictionary<String, Dictionary<String, Any>>()
-        params["h"] = h(action: eventName)
+        params["h"] = h(action: "Collection")
         var b = Dictionary<String, Any>()
-        for (key,value) in events {
-            b[key] = value
+        
+        if memberId.isEmpty == false {
+            b["memberId"] = memberId
         }
-        if userId.isEmpty == false {
-            b["userId"] = userId
-        }
+        b["name"] = "pushToken"
+        b["type"] = "iosToken"
+        b["appType"] = "iosAppPush"
+        b["name"] = "pushToken"
+        b["deviceToken"] = deviceToken
+
         params["b"] = b
         makeRequest(params: params)
     }
@@ -102,7 +106,7 @@ class Xperio: NSObject {
             fatalError("Please call config() first")
         }
         guard let url = URL(string: "\(serverUrl!)/\(appId!)") else {
-            print("Xperio : Url misconfig")
+            print("Xennio : Url misconfig")
             return
         }
         print(url)
@@ -112,12 +116,12 @@ class Xperio: NSObject {
         r.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         
         guard let jsonData = try? JSONSerialization.data(withJSONObject: params, options: []) else {
-            print("Xperio : Json parse error")
+            print("Xennio : Json parse error")
             return
         }
         let jsonString = String(data: jsonData, encoding: .utf8)
         guard let escapedString = jsonString?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-            print("Xperio : Url encoding error")
+            print("Xennio : Url encoding error")
             return
         }
         let base64 = Data(escapedString.utf8).base64EncodedString()
