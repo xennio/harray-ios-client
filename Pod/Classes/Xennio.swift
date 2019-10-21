@@ -68,6 +68,22 @@ class Xennio: NSObject {
         makeRequest(params: params)
     }
 
+    static func impression (activity : String, lastActivity : String, events : Dictionary<String, Any> = Dictionary<String, Any>(), memberId : String = "") {
+        var params = Dictionary<String, Dictionary<String, Any>>()
+        params["h"] = h(action: "IM")
+        var b = Dictionary<String, Any>()
+        for (key,value) in events {
+            b[key] = value
+        }
+        b["pageType"] = activity
+        b["rf"] = lastActivity
+        if memberId.isEmpty == false {
+            b["memberId"] = memberId
+        }
+        params["b"] = b
+        makeRequest(params: params)
+    }
+
     static func savePushToken(deviceToken : String, memberId : String = "") {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "Collection")
