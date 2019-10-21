@@ -69,6 +69,7 @@ enum UserDefaultsKey: String {
     }
     
     @objc public static func sessionStart(activity : String = "", lastActivity : String = "", customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+        print("#### HEXennio SS")
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "SS")
         var b = Dictionary<String, Any>()
@@ -84,6 +85,7 @@ enum UserDefaultsKey: String {
     }
     
     @objc public static func pageView(pageType : String, lastActivity : String = "", customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+        print("#### HEXennio PV # pageType: \(pageType), customParams: \(customParams)")
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "PV")
         var b = Dictionary<String, Any>()
@@ -97,6 +99,7 @@ enum UserDefaultsKey: String {
     }
     
     @objc public static func impression(pageType : String, lastActivity : String = "", customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+        print("#### HEXennio IM # pageType: \(pageType), customParams: \(customParams)")
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "IM")
         var b = Dictionary<String, Any>()
@@ -109,7 +112,8 @@ enum UserDefaultsKey: String {
         makeRequest(params: params)
     }
     
-    @objc public static func actionResult(pageType : String, type: String, customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+    @objc public static func actionResult(pageType : String, type: String, conversationType: String, customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+        print("#### HEXennio AR # pageType: \(pageType), type: \(type), conversationType: \(conversationType), customParams: \(customParams)")
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "AR")
         var b = Dictionary<String, Any>()
@@ -118,6 +122,7 @@ enum UserDefaultsKey: String {
         }
         b["pageType"] = pageType
         b["type"] = type
+        b["conversationType"] = conversationType
         params["b"] = b
         makeRequest(params: params)
     }
