@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14A5513F67054D7F0769600CE536205A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		1760424BE5BBAD56987184B9CA9F179D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		1CB185FF315EAC0537072F192341AF05 /* Pods-HEXennio_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 918C5D3941A408888719EC55D125FF03 /* Pods-HEXennio_Example-dummy.m */; };
+		2E65AAA95B178ADBEA9642867E2EE01E /* HEXennio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 966441100A941C468E35B0130C6BB273 /* HEXennio-dummy.m */; };
+		38F9DCD4D5871BF6F6DCB3CA572AE5B4 /* Pods-HEXennio_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0729B081CECECB9EA45800A2181798CE /* Pods-HEXennio_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F0710F82E6E4FE64A91D6B2C3DDEAB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		64C0DEDE2264E72500A845B7 /* HEXennio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0DEDD2264E72500A845B7 /* HEXennio.swift */; };
+		6B7845DE9EFAF973E63CFB6182284A1D /* Pods-HEXennio_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E23D933E7565FB9819826677A0FCC8 /* Pods-HEXennio_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C86FBA703EEADD79459A05A5FE442397 /* HEXennio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86B41479731584C9D621363F184077F4 /* HEXennio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD872E098FFF69816EB7734E9F9DA0E2 /* Pods-HEXennio_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6097A794944219B2B1F926C1E0702 /* Pods-HEXennio_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8EEBD5DB00EE606DEB80B725412C4DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E65EA5B0C789E229B7160207C99602;
+			remoteInfo = "Pods-HEXennio_Example";
+		};
+		E76C9904F7F9D2157E97957A456F0C85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75E213BB1F6B8783263104F3B404EF7E;
+			remoteInfo = HEXennio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05E40BD043C67894AAEA1F5775FF5368 /* Pods-HEXennio_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HEXennio_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		06AC5FF20384B0BB11D41C8FF9E92594 /* HEXennio-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HEXennio-Info.plist"; sourceTree = "<group>"; };
+		0729B081CECECB9EA45800A2181798CE /* Pods-HEXennio_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HEXennio_Tests-umbrella.h"; sourceTree = "<group>"; };
+		0B10A0B408BBD7EAFE963FD63D095168 /* Pods_HEXennio_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEXennio_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F41EBC7CED6A4439B9F0781F06D8696 /* HEXennio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HEXennio-prefix.pch"; sourceTree = "<group>"; };
+		112747A338778C7B4EBBBD95E740C616 /* Pods-HEXennio_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HEXennio_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		12AE76640D2896B941FE665FC2C64214 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		227DCB94F495987C1C823B70CF443BF2 /* Pods_HEXennio_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEXennio_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24E23D933E7565FB9819826677A0FCC8 /* Pods-HEXennio_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HEXennio_Example-umbrella.h"; sourceTree = "<group>"; };
+		2B89E92B3C8C8A750111F4A7FC8E1900 /* Pods-HEXennio_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HEXennio_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2BF8D1E38FDA85225A6E1E0155445C9C /* Pods-HEXennio_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HEXennio_Tests.modulemap"; sourceTree = "<group>"; };
+		40047E8C545118898FFDAF0A86FB9200 /* HEXennio.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HEXennio.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		417052CF47E262F3E98BE4EE27578AB8 /* Pods-HEXennio_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HEXennio_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4928CBA2E7B16EE7D6249B977DCA24A1 /* Pods-HEXennio_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HEXennio_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4AD78D63751C023DF1AAB429DF6E0C22 /* HEXennio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXennio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F6097A794944219B2B1F926C1E0702 /* Pods-HEXennio_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HEXennio_Tests-dummy.m"; sourceTree = "<group>"; };
+		63DF7E6F2E41EF6500AE749109BD24B9 /* HEXennio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HEXennio.xcconfig; sourceTree = "<group>"; };
+		64C0DEDD2264E72500A845B7 /* HEXennio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEXennio.swift; sourceTree = "<group>"; };
+		651F46A333D70040C5A0EFC45A281CE4 /* HEXennio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HEXennio.modulemap; sourceTree = "<group>"; };
+		6CE62BBD5B51F4EB8EA297A6896FEDDE /* Pods-HEXennio_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HEXennio_Example.modulemap"; sourceTree = "<group>"; };
+		7EEE6F70E5B2F9A189D71626C4D1DCC4 /* Pods-HEXennio_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HEXennio_Example-frameworks.sh"; sourceTree = "<group>"; };
+		86B41479731584C9D621363F184077F4 /* HEXennio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HEXennio-umbrella.h"; sourceTree = "<group>"; };
+		8C1C56C376D3C026B3CD4DB34237D01E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8C2DB4DC45424D4BC83EF6751815556D /* Pods-HEXennio_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HEXennio_Tests-Info.plist"; sourceTree = "<group>"; };
+		918C5D3941A408888719EC55D125FF03 /* Pods-HEXennio_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HEXennio_Example-dummy.m"; sourceTree = "<group>"; };
+		966441100A941C468E35B0130C6BB273 /* HEXennio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HEXennio-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A59083CB778996388AD1AB9D1AACA4A9 /* Pods-HEXennio_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HEXennio_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B85DA6F7FC25551FFFF10C8DD11B6428 /* Pods-HEXennio_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HEXennio_Example-Info.plist"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBAD37E56AFD92EE91F4DD2A1D9EFE6E /* Pods-HEXennio_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HEXennio_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D7D8A5194341496D271316E61BC0DC9B /* Pods-HEXennio_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HEXennio_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D062EB81CDE0BA31EA151D136A606ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1760424BE5BBAD56987184B9CA9F179D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F118D0DAB11A3030C890F4B433E9862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0710F82E6E4FE64A91D6B2C3DDEAB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFA9D1C19EA23D3E4350B1B9B5119F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A5513F67054D7F0769600CE536205A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		004C1C78870BD5BCC98FFD9A2C92A525 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C75436BFFE8C6C0014E2D36BA4D35D2 /* HEXennio */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		035F6FF812D83B3AF38FEB40C075E9E6 /* Pods-HEXennio_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6CE62BBD5B51F4EB8EA297A6896FEDDE /* Pods-HEXennio_Example.modulemap */,
+				CBAD37E56AFD92EE91F4DD2A1D9EFE6E /* Pods-HEXennio_Example-acknowledgements.markdown */,
+				D7D8A5194341496D271316E61BC0DC9B /* Pods-HEXennio_Example-acknowledgements.plist */,
+				918C5D3941A408888719EC55D125FF03 /* Pods-HEXennio_Example-dummy.m */,
+				7EEE6F70E5B2F9A189D71626C4D1DCC4 /* Pods-HEXennio_Example-frameworks.sh */,
+				B85DA6F7FC25551FFFF10C8DD11B6428 /* Pods-HEXennio_Example-Info.plist */,
+				24E23D933E7565FB9819826677A0FCC8 /* Pods-HEXennio_Example-umbrella.h */,
+				112747A338778C7B4EBBBD95E740C616 /* Pods-HEXennio_Example.debug.xcconfig */,
+				2B89E92B3C8C8A750111F4A7FC8E1900 /* Pods-HEXennio_Example.release.xcconfig */,
+			);
+			name = "Pods-HEXennio_Example";
+			path = "Target Support Files/Pods-HEXennio_Example";
+			sourceTree = "<group>";
+		};
+		22F646F440B270E76BABADBE4B6FE39F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AD78D63751C023DF1AAB429DF6E0C22 /* HEXennio.framework */,
+				0B10A0B408BBD7EAFE963FD63D095168 /* Pods_HEXennio_Example.framework */,
+				227DCB94F495987C1C823B70CF443BF2 /* Pods_HEXennio_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		241F5F4E03145A535AB201D0A6566EEE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				651F46A333D70040C5A0EFC45A281CE4 /* HEXennio.modulemap */,
+				63DF7E6F2E41EF6500AE749109BD24B9 /* HEXennio.xcconfig */,
+				966441100A941C468E35B0130C6BB273 /* HEXennio-dummy.m */,
+				06AC5FF20384B0BB11D41C8FF9E92594 /* HEXennio-Info.plist */,
+				0F41EBC7CED6A4439B9F0781F06D8696 /* HEXennio-prefix.pch */,
+				86B41479731584C9D621363F184077F4 /* HEXennio-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HEXennio";
+			sourceTree = "<group>";
+		};
+		4013E5EB80EE91DA2C92ED9ABB2A6C9D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				035F6FF812D83B3AF38FEB40C075E9E6 /* Pods-HEXennio_Example */,
+				4AF7E89EBD1A432B86989A2323A4D026 /* Pods-HEXennio_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4AF7E89EBD1A432B86989A2323A4D026 /* Pods-HEXennio_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2BF8D1E38FDA85225A6E1E0155445C9C /* Pods-HEXennio_Tests.modulemap */,
+				4928CBA2E7B16EE7D6249B977DCA24A1 /* Pods-HEXennio_Tests-acknowledgements.markdown */,
+				05E40BD043C67894AAEA1F5775FF5368 /* Pods-HEXennio_Tests-acknowledgements.plist */,
+				55F6097A794944219B2B1F926C1E0702 /* Pods-HEXennio_Tests-dummy.m */,
+				8C2DB4DC45424D4BC83EF6751815556D /* Pods-HEXennio_Tests-Info.plist */,
+				0729B081CECECB9EA45800A2181798CE /* Pods-HEXennio_Tests-umbrella.h */,
+				A59083CB778996388AD1AB9D1AACA4A9 /* Pods-HEXennio_Tests.debug.xcconfig */,
+				417052CF47E262F3E98BE4EE27578AB8 /* Pods-HEXennio_Tests.release.xcconfig */,
+			);
+			name = "Pods-HEXennio_Tests";
+			path = "Target Support Files/Pods-HEXennio_Tests";
+			sourceTree = "<group>";
+		};
+		64C0DEDC2264E71D00A845B7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				64C0DEDD2264E72500A845B7 /* HEXennio.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9C75436BFFE8C6C0014E2D36BA4D35D2 /* HEXennio */ = {
+			isa = PBXGroup;
+			children = (
+				64C0DEDC2264E71D00A845B7 /* Classes */,
+				A9186A1702D3D202E120CB2B1B946B45 /* Pod */,
+				241F5F4E03145A535AB201D0A6566EEE /* Support Files */,
+			);
+			name = HEXennio;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A9186A1702D3D202E120CB2B1B946B45 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				40047E8C545118898FFDAF0A86FB9200 /* HEXennio.podspec */,
+				12AE76640D2896B941FE665FC2C64214 /* LICENSE */,
+				8C1C56C376D3C026B3CD4DB34237D01E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				004C1C78870BD5BCC98FFD9A2C92A525 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				22F646F440B270E76BABADBE4B6FE39F /* Products */,
+				4013E5EB80EE91DA2C92ED9ABB2A6C9D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		97A757DC13E89E93CDA1AE616B1231A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B7845DE9EFAF973E63CFB6182284A1D /* Pods-HEXennio_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACD91BF2ABA586E03BB2439AADC0EE03 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C86FBA703EEADD79459A05A5FE442397 /* HEXennio-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD5826FAFA8C20E3FA7663C9C75A7F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F9DCD4D5871BF6F6DCB3CA572AE5B4 /* Pods-HEXennio_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		27E65EA5B0C789E229B7160207C99602 /* Pods-HEXennio_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E6731D11590FCACE260F0F6D0DD52 /* Build configuration list for PBXNativeTarget "Pods-HEXennio_Example" */;
+			buildPhases = (
+				97A757DC13E89E93CDA1AE616B1231A3 /* Headers */,
+				D30A623E0F8FEE91A4D151DE599ECF71 /* Sources */,
+				5D062EB81CDE0BA31EA151D136A606ED /* Frameworks */,
+				66472B88123FD965A630E00E739459C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BA541117D36F7D25B19B8B907E1BD71 /* PBXTargetDependency */,
+			);
+			name = "Pods-HEXennio_Example";
+			productName = "Pods-HEXennio_Example";
+			productReference = 0B10A0B408BBD7EAFE963FD63D095168 /* Pods_HEXennio_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		577B0B60924719F6A2F5582009D34058 /* Pods-HEXennio_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7677A721C2F840FB6B146B6BAD579199 /* Build configuration list for PBXNativeTarget "Pods-HEXennio_Tests" */;
+			buildPhases = (
+				FAD5826FAFA8C20E3FA7663C9C75A7F8 /* Headers */,
+				59C2C5CF951CF2825FFF9CF2C03D05BA /* Sources */,
+				AFA9D1C19EA23D3E4350B1B9B5119F43 /* Frameworks */,
+				38719290D1CECB8163D4C6738CD0BCD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F6ADBDDF72320643DED05FB714B4C7A /* PBXTargetDependency */,
+			);
+			name = "Pods-HEXennio_Tests";
+			productName = "Pods-HEXennio_Tests";
+			productReference = 227DCB94F495987C1C823B70CF443BF2 /* Pods_HEXennio_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75E213BB1F6B8783263104F3B404EF7E /* HEXennio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CDF985BDAB03C70E6CD007D6060706 /* Build configuration list for PBXNativeTarget "HEXennio" */;
+			buildPhases = (
+				ACD91BF2ABA586E03BB2439AADC0EE03 /* Headers */,
+				D07DDED925C1550AC104A4EAFE829BFF /* Sources */,
+				8F118D0DAB11A3030C890F4B433E9862 /* Frameworks */,
+				62EE7F8D377F3F070043C39D52CE9063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HEXennio;
+			productName = HEXennio;
+			productReference = 4AD78D63751C023DF1AAB429DF6E0C22 /* HEXennio.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					75E213BB1F6B8783263104F3B404EF7E = {
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 22F646F440B270E76BABADBE4B6FE39F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75E213BB1F6B8783263104F3B404EF7E /* HEXennio */,
+				27E65EA5B0C789E229B7160207C99602 /* Pods-HEXennio_Example */,
+				577B0B60924719F6A2F5582009D34058 /* Pods-HEXennio_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38719290D1CECB8163D4C6738CD0BCD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62EE7F8D377F3F070043C39D52CE9063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66472B88123FD965A630E00E739459C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59C2C5CF951CF2825FFF9CF2C03D05BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD872E098FFF69816EB7734E9F9DA0E2 /* Pods-HEXennio_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07DDED925C1550AC104A4EAFE829BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C0DEDE2264E72500A845B7 /* HEXennio.swift in Sources */,
+				2E65AAA95B178ADBEA9642867E2EE01E /* HEXennio-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30A623E0F8FEE91A4D151DE599ECF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB185FF315EAC0537072F192341AF05 /* Pods-HEXennio_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BA541117D36F7D25B19B8B907E1BD71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HEXennio;
+			target = 75E213BB1F6B8783263104F3B404EF7E /* HEXennio */;
+			targetProxy = E76C9904F7F9D2157E97957A456F0C85 /* PBXContainerItemProxy */;
+		};
+		8F6ADBDDF72320643DED05FB714B4C7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HEXennio_Example";
+			target = 27E65EA5B0C789E229B7160207C99602 /* Pods-HEXennio_Example */;
+			targetProxy = B8EEBD5DB00EE606DEB80B725412C4DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00C11BDC8255DFE84A114AEA44723890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417052CF47E262F3E98BE4EE27578AB8 /* Pods-HEXennio_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HEXennio_Tests/Pods-HEXennio_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HEXennio_Tests/Pods-HEXennio_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		310D82F3248F4D770F6FFE83131D27AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B89E92B3C8C8A750111F4A7FC8E1900 /* Pods-HEXennio_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HEXennio_Example/Pods-HEXennio_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HEXennio_Example/Pods-HEXennio_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3135C26582AC99C2885903ED887B4693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112747A338778C7B4EBBBD95E740C616 /* Pods-HEXennio_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HEXennio_Example/Pods-HEXennio_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HEXennio_Example/Pods-HEXennio_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		417C96C823D8EADD9694B5F77C1C615D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DF7E6F2E41EF6500AE749109BD24B9 /* HEXennio.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HEXennio/HEXennio-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HEXennio/HEXennio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HEXennio/HEXennio.modulemap";
+				PRODUCT_MODULE_NAME = HEXennio;
+				PRODUCT_NAME = HEXennio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		562B3834285A092BAEF6F79926A5C55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59083CB778996388AD1AB9D1AACA4A9 /* Pods-HEXennio_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HEXennio_Tests/Pods-HEXennio_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HEXennio_Tests/Pods-HEXennio_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B03169F9B30008BCB38BC576A9F379D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DF7E6F2E41EF6500AE749109BD24B9 /* HEXennio.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HEXennio/HEXennio-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HEXennio/HEXennio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HEXennio/HEXennio.modulemap";
+				PRODUCT_MODULE_NAME = HEXennio;
+				PRODUCT_NAME = HEXennio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		076E6731D11590FCACE260F0F6D0DD52 /* Build configuration list for PBXNativeTarget "Pods-HEXennio_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3135C26582AC99C2885903ED887B4693 /* Debug */,
+				310D82F3248F4D770F6FFE83131D27AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32CDF985BDAB03C70E6CD007D6060706 /* Build configuration list for PBXNativeTarget "HEXennio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03169F9B30008BCB38BC576A9F379D9 /* Debug */,
+				417C96C823D8EADD9694B5F77C1C615D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
+				F232B5ECA11A71BFA199A229B323F454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7677A721C2F840FB6B146B6BAD579199 /* Build configuration list for PBXNativeTarget "Pods-HEXennio_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562B3834285A092BAEF6F79926A5C55A /* Debug */,
+				00C11BDC8255DFE84A114AEA44723890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

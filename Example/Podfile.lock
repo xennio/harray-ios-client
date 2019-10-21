@@ -1,0 +1,16 @@
+PODS:
+  - HEXennio (0.1.0)
+
+DEPENDENCIES:
+  - HEXennio (from `../`)
+
+EXTERNAL SOURCES:
+  HEXennio:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HEXennio: 04151e70dbf5afd94bc043a2a3c266753919a7c3
+
+PODFILE CHECKSUM: 58a8c9fb06457b8c09f3342bd788f21f1215548a
+
+COCOAPODS: 1.6.1

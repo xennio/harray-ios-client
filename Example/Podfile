@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HEXennio_Example' do
+  pod 'HEXennio', :path => '../'
+
+  target 'HEXennio_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

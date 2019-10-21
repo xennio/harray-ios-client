@@ -1,0 +1,22 @@
+{
+  "name": "HEXennio",
+  "version": "0.1.0",
+  "summary": "A short description of HEXennio.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/abdurrahmansanli/HEXennio",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "abdurrahmansanli": "asanli@hurriyetemlak.com"
+  },
+  "source": {
+    "git": "https://github.com/abdurrahmansanli/HEXennio.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HEXennio/Classes/**/*"
+}

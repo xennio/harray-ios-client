@@ -1,0 +1,6 @@
+framework module HEXennio {
+  umbrella header "HEXennio-umbrella.h"
+
+  export *
+  module * { export * }
+}

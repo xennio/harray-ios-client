@@ -1,9 +1,9 @@
-# Xennio
+# HEXennio
 
-[![CI Status](https://img.shields.io/travis/cem_ayan@outlook.com/Xennio.svg?style=flat)](https://travis-ci.org/cem_ayan@outlook.com/Xennio)
-[![Version](https://img.shields.io/cocoapods/v/Xennio.svg?style=flat)](https://cocoapods.org/pods/Xennio)
-[![License](https://img.shields.io/cocoapods/l/Xennio.svg?style=flat)](https://cocoapods.org/pods/Xennio)
-[![Platform](https://img.shields.io/cocoapods/p/Xennio.svg?style=flat)](https://cocoapods.org/pods/Xennio)
+[![CI Status](https://img.shields.io/travis/abdurrahmansanli/HEXennio.svg?style=flat)](https://travis-ci.org/abdurrahmansanli/HEXennio)
+[![Version](https://img.shields.io/cocoapods/v/HEXennio.svg?style=flat)](https://cocoapods.org/pods/HEXennio)
+[![License](https://img.shields.io/cocoapods/l/HEXennio.svg?style=flat)](https://cocoapods.org/pods/HEXennio)
+[![Platform](https://img.shields.io/cocoapods/p/HEXennio.svg?style=flat)](https://cocoapods.org/pods/HEXennio)
 
 ## Example
 
@@ -13,17 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Xennio is available through [CocoaPods](https://cocoapods.org). To install
+HEXennio is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Xennio'
+pod 'HEXennio'
 ```
 
 ## Author
 
-ozan.uysal@appcent.mobi, ata.turgay@appcent.mobi
+abdurrahmansanli, asanli@hurriyetemlak.com
 
 ## License
 
-Xennio is available under the MIT license. See the LICENSE file for more info.
+HEXennio is available under the MIT license. See the LICENSE file for more info.
