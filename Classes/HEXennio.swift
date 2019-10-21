@@ -112,7 +112,7 @@ enum UserDefaultsKey: String {
         makeRequest(params: params)
     }
     
-    @objc public static func actionResult(pageType : String, type: String, conversationType: String?, customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+    @objc public static func actionResult(pageType : String, type: String, conversationType: String? = nil, customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
         if let conversationType = conversationType {
             print("#### HEXennio AR # pageType: \(pageType), type: \(type), conversationType: \(conversationType), customParams: \(customParams)")
         } else {
