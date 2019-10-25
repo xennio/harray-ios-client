@@ -14,6 +14,126 @@ enum UserDefaultsKey: String {
     case PushToken = "xPushToken"
 }
 
+@objc public class HEXennioBody: NSObject {
+    
+    var pageType: String?
+    var type: String?
+    var conversionType: String?
+    var memberId: String?
+    var ownerId: String?
+    var ID: String?
+    var collection: String?
+    var price: String?
+    var page: String?
+    var logType: String?
+    
+    var mainCategory: String?
+    var category: String?
+    var subCategory: String?
+    var city: String?
+    var county: String?
+    var district: String?
+    var ownerType: String?
+    
+    var searchKeyword: String?
+    var sortType: String?
+    var sortDirection: String?
+    var breadCrumb: String?
+    var URL: String?
+    var campaignID: String?
+    var utm_source: String?
+    var utm_medium: String?
+    var utm_campaign: String?
+    var utm_term: String?
+    var utm_content: String?
+    var notificationID: String?
+    var gclid: String?
+    var rf: String?
+    var lat: String?
+    var lng: String?
+    
+    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: String? = nil, price: String? = nil, page: String? = nil, logType: String? = nil,  mainCategory: String? = nil, category: String? = nil, subCategory: String? = nil, city: String? = nil, county: String? = nil, district: String? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil) {
+        
+        self.pageType = pageType
+        self.type = type
+        self.conversionType = conversionType
+        self.memberId = memberId
+        self.ownerId = ownerId
+        self.ID = ID
+        self.collection = collection
+        self.price = price
+        self.page = page
+        self.logType = logType
+        
+        self.mainCategory = mainCategory
+        self.category = category
+        self.subCategory = subCategory
+        self.city = city
+        self.county = county
+        self.district = district
+        self.ownerType = ownerType
+        
+        self.searchKeyword = searchKeyword
+        self.sortType = sortType
+        self.sortDirection = sortDirection
+        self.breadCrumb = breadCrumb
+        self.URL = URL
+        self.campaignID = campaignID
+        self.utm_source = utm_source
+        self.utm_medium = utm_medium
+        self.utm_campaign = utm_campaign
+        self.utm_term = utm_term
+        self.utm_content = utm_content
+        self.notificationID = notificationID
+        self.gclid = gclid
+        self.rf = rf
+        self.lat = lat
+        self.lng = lng
+    }
+    
+    func getParamsDict() -> Dictionary<String,Any> {
+        var dictParams = Dictionary<String,Any>()
+        
+        dictParams["pageType"] = self.pageType
+        dictParams["type"] = self.type
+        dictParams["conversionType"] = self.conversionType
+        dictParams["memberId"] = self.memberId
+        dictParams["ownerId"] = self.ownerId
+        dictParams["ID"] = self.ID
+        dictParams["collection"] = self.collection
+        dictParams["price"] = self.price
+        dictParams["page"] = self.page
+        dictParams["logType"] = self.logType
+        
+        dictParams["mainCategory"] = self.mainCategory
+        dictParams["category"] = self.category
+        dictParams["subCategory"] = self.subCategory
+        dictParams["city"] = self.city
+        dictParams["county"] = self.county
+        dictParams["district"] = self.district
+        dictParams["ownerType"] = self.ownerType
+        
+        dictParams["searchKeyword"] = self.searchKeyword
+        dictParams["sortType"] = self.sortType
+        dictParams["sortDirection"] = self.sortDirection
+        dictParams["breadCrumb"] = self.breadCrumb
+        dictParams["URL"] = self.URL
+        dictParams["campaignID"] = self.campaignID
+        dictParams["utm_source"] = self.utm_source
+        dictParams["utm_medium"] = self.utm_medium
+        dictParams["utm_campaign"] = self.utm_campaign
+        dictParams["utm_term"] = self.utm_term
+        dictParams["utm_content"] = self.utm_content
+        dictParams["notificationID"] = self.notificationID
+        dictParams["gclid"] = self.gclid
+        dictParams["rf"] = self.rf
+        dictParams["lat"] = self.lat
+        dictParams["lng"] = self.lng
+        
+        return dictParams
+    }
+}
+
 @objc public class HEXennioBeater: NSObject {
     
     private static var timer: Timer?
@@ -68,74 +188,46 @@ enum UserDefaultsKey: String {
         }
     }
     
-    @objc public static func sessionStart(activity : String = "", lastActivity : String = "", customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
-        print("#### HEXennio SS")
+    @objc public static func sessionStart(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "SS")
         var b = Dictionary<String, Any>()
-        for (key,value) in customParams {
-            b[key] = value
-        }
-        b["activity"] = activity
-        b["rf"] = lastActivity
         b["os"] = "iOS \(UIDevice.current.systemVersion)"
         b["id"] = UIDevice.current.identifierForVendor?.uuidString
         params["b"] = b
+        print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
     
-    @objc public static func pageView(pageType : String, lastActivity : String = "", customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
-        print("#### HEXennio PV # pageType: \(pageType), customParams: \(customParams)")
+    @objc public static func pageView(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "PV")
-        var b = Dictionary<String, Any>()
-        for (key,value) in customParams {
-            b[key] = value
-        }
-        b["pageType"] = pageType
-        b["rf"] = lastActivity
-        params["b"] = b
+        params["b"] = hexennioBody.getParamsDict()
+        print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
     
-    @objc public static func impression(pageType : String, lastActivity : String = "", customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
-        print("#### HEXennio IM # pageType: \(pageType), customParams: \(customParams)")
+    @objc public static func impression(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "IM")
-        var b = Dictionary<String, Any>()
-        for (key,value) in customParams {
-            b[key] = value
-        }
-        b["pageType"] = pageType
-        b["rf"] = lastActivity
-        params["b"] = b
+        params["b"] = hexennioBody.getParamsDict()
+        print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
     
-    @objc public static func actionResult(pageType : String, type: String, conversationType: String? = nil, customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
-        if let conversationType = conversationType {
-            print("#### HEXennio AR # pageType: \(pageType), type: \(type), conversationType: \(conversationType), customParams: \(customParams)")
-        } else {
-            print("#### HEXennio AR # pageType: \(pageType), type: \(type), customParams: \(customParams)")
-        }
+    @objc public static func actionResult(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "AR")
-        var b = Dictionary<String, Any>()
-        for (key,value) in customParams {
-            b[key] = value
-        }
-        b["pageType"] = pageType
-        b["type"] = type
-        b["conversationType"] = conversationType
-        params["b"] = b
+        params["b"] = hexennioBody.getParamsDict()
+        print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
     
-    @objc public static func savePushToken(deviceToken : String, customParams : Dictionary<String, Any> = Dictionary<String, Any>()) {
+    @objc public static func savePushToken(deviceToken : String, hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "Collection")
         var b = Dictionary<String, Any>()
-        for (key,value) in customParams {
+        for (key,value) in hexennioBody.getParamsDict() {
             b[key] = value
         }
         b["name"] = "pushToken"
