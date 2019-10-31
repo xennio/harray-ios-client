@@ -22,18 +22,18 @@ enum UserDefaultsKey: String {
     var memberId: String?
     var ownerId: String?
     var ID: String?
-    var collection: String?
+    var collection: Array<String>?
     var price: String?
     var page: String?
     var logType: String?
     
-    var mainCategory: String?
-    var category: String?
-    var subCategory: String?
-    var city: String?
-    var county: String?
-    var district: String?
-    var ownerType: String?
+    var mainCategory: Array<String>?
+    var category: Array<String>?
+    var subCategory: Array<String>?
+    var city: Array<String>?
+    var county: Array<String>?
+    var district: Array<String>?
+    var ownerType: Array<String>?
     
     var searchKeyword: String?
     var sortType: String?
@@ -52,7 +52,7 @@ enum UserDefaultsKey: String {
     var lat: String?
     var lng: String?
     
-    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: String? = nil, price: String? = nil, page: String? = nil, logType: String? = nil,  mainCategory: String? = nil, category: String? = nil, subCategory: String? = nil, city: String? = nil, county: String? = nil, district: String? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil) {
+    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: Array<String>? = nil, price: String? = nil, page: String? = nil, logType: String? = nil,  mainCategory: String? = nil, category: Array<String>? = nil, subCategory: Array<String>? = nil, city: String? = nil, county: Array<String>? = nil, district: Array<String>? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil) {
         
         self.pageType = pageType
         self.type = type
@@ -65,13 +65,13 @@ enum UserDefaultsKey: String {
         self.page = page
         self.logType = logType
         
-        self.mainCategory = mainCategory
+        self.mainCategory = (mainCategory == nil ? nil : [mainCategory!])
         self.category = category
         self.subCategory = subCategory
-        self.city = city
+        self.city = (city == nil ? nil : [city!])
         self.county = county
         self.district = district
-        self.ownerType = ownerType
+        self.ownerType = (ownerType == nil ? nil : [ownerType!])
         
         self.searchKeyword = searchKeyword
         self.sortType = sortType
@@ -99,25 +99,25 @@ enum UserDefaultsKey: String {
         dictParams["conversionType"] = self.conversionType
         dictParams["memberId"] = self.memberId
         dictParams["ownerId"] = self.ownerId
-        dictParams["ID"] = self.ID
+        dictParams["id"] = self.ID
         dictParams["collection"] = self.collection
         dictParams["price"] = self.price
         dictParams["page"] = self.page
         dictParams["logType"] = self.logType
         
-        dictParams["mainCategory"] = self.mainCategory
-        dictParams["category"] = self.category
-        dictParams["subCategory"] = self.subCategory
-        dictParams["city"] = self.city
-        dictParams["county"] = self.county
-        dictParams["district"] = self.district
-        dictParams["ownerType"] = self.ownerType
+        dictParams["filter2"] = self.mainCategory
+        dictParams["filter1"] = self.category
+        dictParams["filter3"] = self.subCategory
+        dictParams["filter4"] = self.city
+        dictParams["filter5"] = self.county
+        dictParams["filter6"] = self.district
+        dictParams["filter7"] = self.ownerType
         
         dictParams["searchKeyword"] = self.searchKeyword
         dictParams["sortType"] = self.sortType
         dictParams["sortDirection"] = self.sortDirection
         dictParams["breadCrumb"] = self.breadCrumb
-        dictParams["URL"] = self.URL
+        dictParams["url"] = self.URL
         dictParams["campaignID"] = self.campaignID
         dictParams["utm_source"] = self.utm_source
         dictParams["utm_medium"] = self.utm_medium
@@ -129,6 +129,8 @@ enum UserDefaultsKey: String {
         dictParams["rf"] = self.rf
         dictParams["lat"] = self.lat
         dictParams["lng"] = self.lng
+        
+        dictParams = dictParams.filter { (($0.value != nil) && (($0.value as? String) != "" ) && (($0.value as? Array<String>)?.count != 0)) }
         
         return dictParams
     }
