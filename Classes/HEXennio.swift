@@ -15,7 +15,7 @@ enum UserDefaultsKey: String {
 }
 
 @objc public class HEXennioBody: NSObject {
-    
+
     var pageType: String?
     var type: String?
     var conversionType: String?
@@ -26,7 +26,7 @@ enum UserDefaultsKey: String {
     var price: String?
     var page: String?
     var logType: String?
-    
+
     var mainCategory: Array<String>?
     var category: Array<String>?
     var subCategory: Array<String>?
@@ -34,7 +34,7 @@ enum UserDefaultsKey: String {
     var county: Array<String>?
     var district: Array<String>?
     var ownerType: Array<String>?
-    
+
     var searchKeyword: String?
     var sortType: String?
     var sortDirection: String?
@@ -52,8 +52,10 @@ enum UserDefaultsKey: String {
     var lat: String?
     var lng: String?
     
-    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: Array<String>? = nil, price: String? = nil, page: String? = nil, logType: String? = nil,  mainCategory: String? = nil, category: Array<String>? = nil, subCategory: Array<String>? = nil, city: String? = nil, county: Array<String>? = nil, district: Array<String>? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil) {
-        
+    var email: String?
+
+    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: Array<String>? = nil, price: String? = nil, page: String? = nil, logType: String? = nil, mainCategory: String? = nil, category: Array<String>? = nil, subCategory: Array<String>? = nil, city: String? = nil, county: Array<String>? = nil, district: Array<String>? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil, email: String? = nil) {
+
         self.pageType = pageType
         self.type = type
         self.conversionType = conversionType
@@ -64,7 +66,7 @@ enum UserDefaultsKey: String {
         self.price = price
         self.page = page
         self.logType = logType
-        
+
         self.mainCategory = (mainCategory == nil ? nil : [mainCategory!])
         self.category = category
         self.subCategory = subCategory
@@ -72,7 +74,7 @@ enum UserDefaultsKey: String {
         self.county = county
         self.district = district
         self.ownerType = (ownerType == nil ? nil : [ownerType!])
-        
+
         self.searchKeyword = searchKeyword
         self.sortType = sortType
         self.sortDirection = sortDirection
@@ -89,11 +91,13 @@ enum UserDefaultsKey: String {
         self.rf = rf
         self.lat = lat
         self.lng = lng
-    }
-    
-    func getParamsDict() -> Dictionary<String,Any> {
-        var dictParams = Dictionary<String,Any>()
         
+        self.email = email
+    }
+
+    func getParamsDict() -> Dictionary<String, Any> {
+        var dictParams = Dictionary<String, Any>()
+
         dictParams["pageType"] = self.pageType
         dictParams["type"] = self.type
         dictParams["conversionType"] = self.conversionType
@@ -104,7 +108,7 @@ enum UserDefaultsKey: String {
         dictParams["price"] = self.price
         dictParams["page"] = self.page
         dictParams["logType"] = self.logType
-        
+
         dictParams["filter2"] = self.mainCategory
         dictParams["filter1"] = self.category
         dictParams["filter3"] = self.subCategory
@@ -112,7 +116,7 @@ enum UserDefaultsKey: String {
         dictParams["filter5"] = self.county
         dictParams["filter6"] = self.district
         dictParams["filter7"] = self.ownerType
-        
+
         dictParams["searchKeyword"] = self.searchKeyword
         dictParams["sortType"] = self.sortType
         dictParams["sortDirection"] = self.sortDirection
@@ -130,48 +134,50 @@ enum UserDefaultsKey: String {
         dictParams["lat"] = self.lat
         dictParams["lng"] = self.lng
         
+        dictParams["email"] = self.email
+
         dictParams = dictParams.filter { (($0.value != nil) && (($0.value as? String) != "" ) && (($0.value as? Array<String>)?.count != 0)) }
-        
+
         return dictParams
     }
 }
 
 @objc public class HEXennioBeater: NSObject {
-    
+
     private static var timer: Timer?
-    
+
     @objc public static func enable() {
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTimer), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTimer), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTimer), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(resumeTimer), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        
+
         initTimer()
     }
-    
+
     @objc private static func initTimer() {
         HEXennioBeater.timer = Timer.scheduledTimer(timeInterval: 55, target: self, selector: #selector(HEXennioBeater.beat), userInfo: nil, repeats: true)
     }
-    
+
     @objc private static func beat() {
         HEXennio.heartBeat()
     }
-    
+
     @objc private static func pauseTimer() {
         HEXennioBeater.timer?.invalidate()
     }
-    
+
     @objc private static func resumeTimer() {
         HEXennioBeater.initTimer()
     }
 }
 
 @objc public class HEXennio: NSObject {
-    
-    private static var serverUrl : String!
-    private static var appId : String!
-    private static var sessionId : String!
-    
+
+    private static var serverUrl: String!
+    private static var appId: String!
+    private static var sessionId: String!
+
     @objc public static func heartBeat() {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "HB")
@@ -179,8 +185,8 @@ enum UserDefaultsKey: String {
         params["b"] = b
         makeRequest(params: params)
     }
-    
-    @objc public static func config(serverUrl : String, appId : String) {
+
+    @objc public static func config(serverUrl: String, appId: String) {
         self.serverUrl = serverUrl
         self.appId = appId
         sessionId = UUID.init().uuidString
@@ -189,7 +195,7 @@ enum UserDefaultsKey: String {
             UserDefaults.standard.set(UUID.init().uuidString, forKey: UserDefaultsKey.LifeTimeId.rawValue)
         }
     }
-    
+
     @objc public static func sessionStart(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "SS")
@@ -200,7 +206,7 @@ enum UserDefaultsKey: String {
         print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
-    
+
     @objc public static func pageView(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "PV")
@@ -208,7 +214,7 @@ enum UserDefaultsKey: String {
         print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
-    
+
     @objc public static func impression(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "IM")
@@ -216,7 +222,7 @@ enum UserDefaultsKey: String {
         print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
-    
+
     @objc public static func actionResult(hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "AR")
@@ -224,12 +230,12 @@ enum UserDefaultsKey: String {
         print("##HEXennio params: \(params)")
         makeRequest(params: params)
     }
-    
-    @objc public static func savePushToken(deviceToken : String, hexennioBody: HEXennioBody) {
+
+    @objc public static func savePushToken(deviceToken: String, hexennioBody: HEXennioBody) {
         var params = Dictionary<String, Dictionary<String, Any>>()
         params["h"] = h(action: "Collection")
         var b = Dictionary<String, Any>()
-        for (key,value) in hexennioBody.getParamsDict() {
+        for (key, value) in hexennioBody.getParamsDict() {
             b[key] = value
         }
         b["name"] = "pushToken"
@@ -237,17 +243,17 @@ enum UserDefaultsKey: String {
         b["appType"] = "iosAppPush"
         b["name"] = "pushToken"
         b["deviceToken"] = deviceToken
-        
+
         params["b"] = b
         makeRequest(params: params)
     }
-    
+
     // private functions
     private static func isConfigured() -> Bool {
         return serverUrl != nil && appId != nil
     }
-    
-    private static func h(action : String) -> Dictionary<String, String> {
+
+    private static func h(action: String) -> Dictionary<String, String> {
         let lifeTimeId = UserDefaults.standard.string(forKey: UserDefaultsKey.LifeTimeId.rawValue) ?? ""
         var dict = Dictionary<String, String>()
         dict["n"] = action
@@ -255,8 +261,8 @@ enum UserDefaultsKey: String {
         dict["s"] = sessionId
         return dict
     }
-    
-    private static func makeRequest(params : Dictionary<String, Dictionary<String, Any>>) {
+
+    private static func makeRequest(params: Dictionary<String, Dictionary<String, Any>>) {
         if isConfigured() == false {
             fatalError("Please call config() first")
         }
@@ -269,7 +275,7 @@ enum UserDefaultsKey: String {
         var r  = URLRequest(url: url)
         r.httpMethod = "POST"
         r.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        
+
         guard let jsonData = try? JSONSerialization.data(withJSONObject: params, options: []) else {
             print("HEXennio : Json parse error")
             return
@@ -281,17 +287,17 @@ enum UserDefaultsKey: String {
         }
         let base64 = Data(escapedString.utf8).base64EncodedString()
         print("e=\(base64)")
-        let d = "e=\(base64)".data(using:String.Encoding.ascii, allowLossyConversion: false)
+        let d = "e=\(base64)".data(using: String.Encoding.ascii, allowLossyConversion: false)
         r.httpBody = d
-        let task = URLSession.shared.dataTask(with: r) { data, response, error in
+        let task = URLSession.shared.dataTask(with: r) { _, response, _ in
             if let httpResponse = response as? HTTPURLResponse {
                 print(httpResponse.statusCode)
             }
         }
         task.resume()
     }
-    
+
     // tools
-    
-    
+
+
 }
