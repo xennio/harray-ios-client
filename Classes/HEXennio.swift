@@ -53,8 +53,9 @@ enum UserDefaultsKey: String {
     var lng: String?
     
     var email: String?
+    var currency: String?
 
-    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: Array<String>? = nil, price: String? = nil, page: String? = nil, logType: String? = nil, mainCategory: String? = nil, category: Array<String>? = nil, subCategory: Array<String>? = nil, city: String? = nil, county: Array<String>? = nil, district: Array<String>? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil, email: String? = nil) {
+    @objc public init(pageType: String? = nil, type: String? = nil, conversionType: String? = nil, memberId: String? = nil, ownerId: String? = nil, ID: String? = nil, collection: Array<String>? = nil, price: String? = nil, page: String? = nil, logType: String? = nil, mainCategory: String? = nil, category: Array<String>? = nil, subCategory: Array<String>? = nil, city: String? = nil, county: Array<String>? = nil, district: Array<String>? = nil, ownerType: String? = nil, searchKeyword: String? = nil, sortType: String? = nil, sortDirection: String? = nil, breadCrumb: String? = nil, URL: String? = nil, campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil, gclid: String? = nil, rf: String? = nil, lat: String? = nil, lng: String? = nil, email: String? = nil, currency: String? = nil) {
 
         self.pageType = pageType
         self.type = type
@@ -93,6 +94,7 @@ enum UserDefaultsKey: String {
         self.lng = lng
         
         self.email = email
+        self.currency = currency
     }
 
     func getParamsDict() -> Dictionary<String, Any> {
@@ -135,6 +137,7 @@ enum UserDefaultsKey: String {
         dictParams["lng"] = self.lng
         
         dictParams["email"] = self.email
+        dictParams["currency"] = self.currency
 
         dictParams = dictParams.filter { (($0.value != nil) && (($0.value as? String) != "" ) && (($0.value as? Array<String>)?.count != 0)) }
 
