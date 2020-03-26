@@ -97,6 +97,16 @@ enum UserDefaultsKey: String {
         self.currency = currency
     }
 
+    @objc public putPushDeeplink(campaignID: String? = nil, utm_source: String? = nil, utm_medium: String? = nil, utm_campaign: String? = nil, utm_term: String? = nil, utm_content: String? = nil, notificationID: String? = nil) {
+        self.campaignID = campaignID
+        self.utm_source = utm_source
+        self.utm_medium = utm_medium
+        self.utm_campaign = utm_campaign
+        self.utm_term = utm_term
+        self.utm_content = utm_content
+        self.notificationID = notificationID
+    }
+
     func getParamsDict() -> Dictionary<String, Any> {
         var dictParams = Dictionary<String, Any>()
 
@@ -124,13 +134,13 @@ enum UserDefaultsKey: String {
         dictParams["sortDirection"] = self.sortDirection
         dictParams["breadCrumb"] = self.breadCrumb
         dictParams["url"] = self.URL
-        dictParams["campaignID"] = self.campaignID
+        dictParams["campaignId"] = self.campaignID
+        dictParams["pushId"] = self.notificationID
         dictParams["utm_source"] = self.utm_source
         dictParams["utm_medium"] = self.utm_medium
         dictParams["utm_campaign"] = self.utm_campaign
         dictParams["utm_term"] = self.utm_term
         dictParams["utm_content"] = self.utm_content
-        dictParams["notificationID"] = self.notificationID
         dictParams["gclid"] = self.gclid
         dictParams["rf"] = self.rf
         dictParams["lat"] = self.lat
@@ -246,6 +256,32 @@ enum UserDefaultsKey: String {
         b["appType"] = "iosAppPush"
         b["name"] = "pushToken"
         b["deviceToken"] = deviceToken
+
+        params["b"] = b
+        makeRequest(params: params)
+    }
+
+    @objc public static func pushReceived(hexennioBody: HEXennioBody) {
+        var params = Dictionary<String, Dictionary<String, Any>>()
+        params["h"] = h(action: "Feedback")
+        var b = Dictionary<String, Any>()
+        for (key, value) in hexennioBody.getParamsDict() {
+            b[key] = value
+        }
+        b["type"] = "pushReceived"
+
+        params["b"] = b
+        makeRequest(params: params)
+    }
+
+    @objc public static func pushOpened(hexennioBody: HEXennioBody) {
+        var params = Dictionary<String, Dictionary<String, Any>>()
+        params["h"] = h(action: "Feedback")
+        var b = Dictionary<String, Any>()
+        for (key, value) in hexennioBody.getParamsDict() {
+            b[key] = value
+        }
+        b["type"] = "pushOpened"
 
         params["b"] = b
         makeRequest(params: params)
